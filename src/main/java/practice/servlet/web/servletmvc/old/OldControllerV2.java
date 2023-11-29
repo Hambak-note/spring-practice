@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.Controller;
 
-@Component("/springmvc/old-controller")
+@Component("/springmvc/old-controllerV2")
 public class OldControllerV2 implements Controller {
 
 
