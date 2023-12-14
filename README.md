@@ -1,2 +1,2 @@
 # spring-practice
-spring 관련 강의 수강 및 실습을 하기 위한 repo
+spring과 관련한 내용을 학습하고 실습한 내용을 기록하는 저장소
