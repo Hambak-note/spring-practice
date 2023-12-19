@@ -15,4 +15,4 @@ spring과 관련한 내용을 학습하고 실습한 내용을 기록하는 저�
    - 강의 내용 중 추가로 학습한 개념들
       - [싱글톤 패턴](https://github.com/Hambak-note/learning-design-patterns/wiki/%EC%8B%B1%EA%B8%80%ED%86%A4-%ED%8C%A8%ED%84%B4(Singleton)-%ED%8C%A8%ED%84%B4)
       - [어댑터 패턴](https://github.com/Hambak-note/design-patterns-practice/wiki/%EC%96%B4%EB%8C%91%ED%84%B0(Adapter)-%ED%8C%A8%ED%84%B4)
-
+      - [Atomic, Volatile, Synchronized variables에 대하여](https://flower-graden.tistory.com/23)
