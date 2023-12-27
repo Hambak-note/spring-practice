@@ -12,6 +12,8 @@ spring과 관련한 내용을 학습하고 실습한 내용을 기록하는 저�
 1. 스프링 핵심원리 - 기본편
    - [학습 내용 정리](https://github.com/Hambak-note/spring-practice/wiki/%EC%8A%A4%ED%94%84%EB%A7%81-%ED%95%B5%EC%8B%AC-%EC%9B%90%EB%A6%AC-%E2%80%90-%EA%B8%B0%EB%B3%B8%ED%8E%B8)
    - [인프런 강의 링크](https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%ED%95%B5%EC%8B%AC-%EC%9B%90%EB%A6%AC-%EA%B8%B0%EB%B3%B8%ED%8E%B8/dashboard)
+   - 강의 내용 중 추가로 학습한 개념들
+     - [프록시 패턴](https://github.com/Hambak-note/computer-science-practice/wiki/%ED%94%84%EB%A1%9D%EC%8B%9C-(Proxy)-%ED%8C%A8%ED%84%B4)
 
 <br>
 
