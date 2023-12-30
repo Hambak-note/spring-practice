@@ -1,6 +1,5 @@
 package hello.itemservice.message;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -33,6 +32,11 @@ public class MessageSourceTest {
     void notFoundMessageCodeDefaultMessage() {
         String result = ms.getMessage("no_code", null, "기본 메시지", null);
         assertThat(result).isEqualTo("기본 메시지");
+    }
 
+    @Test
+    void argumentMessage() {
+        String result = ms.getMessage("hello.name", new Object[]{"Spring"}, null);
+        assertThat(result).isEqualTo("안녕 Spring");
     }
 }
