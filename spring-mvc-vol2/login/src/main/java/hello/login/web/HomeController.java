@@ -75,7 +75,7 @@ public class HomeController {
 
     @GetMapping("/")
     public String homeLoginV3Spring(
-            @SessionAttribute(name = SessionConst.LOGIN_MEMBER, required = false),
+            @SessionAttribute(name = SessionConst.LOGIN_MEMBER, required = false)
             Member loginMember, Model model
     ) {
 
