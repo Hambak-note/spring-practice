@@ -25,7 +25,7 @@ import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 @Slf4j
 @SpringBootTest
-class MemberServiceV3_3Test {
+class MemberServiceV3_4Test {
 
     public static final String MEMBER_A = "memberA";
     public static final String MEMBER_B = "memberB";
@@ -37,35 +37,31 @@ class MemberServiceV3_3Test {
     @Autowired
     MemberServiceV3_3 memberService;
 
-
-    @AfterEach
-    void after() throws SQLException {
-        memberRepository.delete(MEMBER_A);
-        memberRepository.delete(MEMBER_B);
-        memberRepository.delete(MEMBER_EX);
-    }
-
     @TestConfiguration
     static class TestConfig {
-        @Bean
-        DataSource dataSource() {
-            return new DriverManagerDataSource(URL, USERNAME, PASSWORD);
-        }
 
-        @Bean
-        PlatformTransactionManager transactionManager() {
-            return new DataSourceTransactionManager(dataSource());
+        private final DataSource dataSource;
+
+        public TestConfig(DataSource dataSource) {
+            this.dataSource = dataSource;
         }
 
         @Bean
         MemberRepositoryV3 memberRepositoryV3() {
-            return new MemberRepositoryV3(dataSource());
+            return new MemberRepositoryV3(dataSource);
         }
 
         @Bean
         MemberServiceV3_3 memberServiceV3_3() {
             return new MemberServiceV3_3(memberRepositoryV3());
         }
+    }
+
+    @AfterEach
+    void after() throws SQLException {
+        memberRepository.delete(MEMBER_A);
+        memberRepository.delete(MEMBER_B);
+        memberRepository.delete(MEMBER_EX);
     }
 
     @Test
@@ -116,5 +112,6 @@ class MemberServiceV3_3Test {
         assertThat(findMemberA.getMoney()).isEqualTo(10000);
         assertThat(findMemberEx.getMoney()).isEqualTo(10000);
     }
+
 
 }

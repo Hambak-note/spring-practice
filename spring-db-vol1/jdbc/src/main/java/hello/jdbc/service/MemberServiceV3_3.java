@@ -5,6 +5,7 @@ import hello.jdbc.repository.MemberRepositoryV3;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.support.TransactionTemplate;
 
 import java.sql.SQLException;
@@ -18,6 +19,7 @@ public class MemberServiceV3_3 {
 
     private final MemberRepositoryV3 memberRepository;
 
+    @Transactional
     public void accountTransfer(String fromId, String toId, int money) throws SQLException {
 
         bizLogic(fromId, toId, money);
