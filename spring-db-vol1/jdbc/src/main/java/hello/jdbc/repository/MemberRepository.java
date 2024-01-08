@@ -5,7 +5,7 @@ import hello.jdbc.domain.Member;
 public interface MemberRepository {
     Member save(Member member);
 
-    Member findBYId(String memberId);
+    Member findById(String memberId);
 
     void update(String memberId, int money);
 
